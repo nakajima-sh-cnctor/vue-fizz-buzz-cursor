@@ -5,10 +5,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+// propsとしてnumbersを受け取る
+const props = defineProps<{
+  numbers?: number[]
+}>()
 
-const numbers = ref<number[]>([1, 2, 3, 4, 5, 15, 30])
+// propsを使用していることを明示
+const { numbers } = props
 
+// FizzBuzzのロジックを実装
 function fizzBuzz(n: number): string {
   if (n % 15 === 0) return 'FizzBuzz'
   if (n % 3 === 0) return 'Fizz'

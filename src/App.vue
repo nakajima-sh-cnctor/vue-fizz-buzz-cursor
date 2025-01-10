@@ -2,7 +2,8 @@
   <v-app>
     <v-main>
       <v-container>
-        <FizzBuzz />
+        <FizzBuzz :numbers="[1, 2, 3, 4, 5, 15, 30]" />
+        <FizzBuzz :numbers="[6, 7, 8, 9, 10, 11, 12]" />
       </v-container>
     </v-main>
   </v-app>
